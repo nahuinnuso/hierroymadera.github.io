@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<title>Mesa de Luz Zafiro</title>
+
+<style>
+body{
+    font-family: Arial, sans-serif;
+    background:#f4f1ec;
+    display:flex;
+    justify-content:center;
+    padding:40px;
+}
+
+.container{
+    display:flex;
+    gap:60px;
+}
+
+.product img{
+    width:350px;
+    border-radius:12px;
+    transition:0.3s ease;
+}
+
+.colors{
+    display:flex;
+    flex-direction:column;
+    gap:20px;
+}
+
+.color{
+    width:40px;
+    height:40px;
+    border-radius:50%;
+    cursor:pointer;
+    border:2px solid #ccc;
+    transition:0.2s;
+}
+
+.color:hover{
+    transform:scale(1.1);
+}
+
+.black{background:black;}
+.white{background:white;}
+.beige{background:#d8c3a5;}
+.terracota{background:#b65c2c;}
+</style>
+</head>
+
+<body>
+
+<div class="container">
+
+<div class="product">
+    <h2>Mesa de Luz Zafiro</h2>
+    <img id="mesa" src="https://via.placeholder.com/350x350/d8c3a5/ffffff?text=Arena">
+</div>
+
+<div class="colors">
+    <div class="color beige" onclick="cambiarColor('arena')"></div>
+    <div class="color white" onclick="cambiarColor('blanco')"></div>
+    <div class="color black" onclick="cambiarColor('negro')"></div>
+    <div class="color terracota" onclick="cambiarColor('terracota')"></div>
+</div>
+
+</div>
+
+<script>
+function cambiarColor(color){
+    const img = document.getElementById("mesa");
+
+    if(color === "arena"){
+        img.src="https://via.placeholder.com/350x350/d8c3a5/ffffff?text=Arena";
+    }
+    if(color === "blanco"){
+        img.src="https://via.placeholder.com/350x350/ffffff/000000?text=Blanco";
+    }
+    if(color === "negro"){
+        img.src="https://via.placeholder.com/350x350/000000/ffffff?text=Negro";
+    }
+    if(color === "terracota"){
+        img.src="https://via.placeholder.com/350x350/b65c2c/ffffff?text=Terracota";
+    }
+}
+</script>
+
+</body>
+</html>
